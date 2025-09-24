@@ -1,7 +1,7 @@
 #ifndef T_LIST
 #define T_LIST
 
-
+#include <stddef.h>
 
 /**
  * @enum Type
