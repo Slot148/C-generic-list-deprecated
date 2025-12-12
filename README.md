@@ -54,11 +54,12 @@ O projeto utiliza **CMake** para a compilação.
     cmake ..
     make
     ```
+As pastas `include` e `lib` devem ser adicionadas as variáveis do ambiente ou do sistema.
 
-4.  **Execute o programa principal (que roda os testes):**
-    ```bash
-    ./meu_programa
-    ```
+4. **Para compilar seu programa basta utilizar as flags `-Iinclude` e `-ltlists`:
+   ```bash
+   gcc meu_arquivo.c -Iinclude -ltlist -o meu_programa.exe
+   ```
 
 ## 📋 Exemplos de Uso
 
