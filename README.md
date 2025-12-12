@@ -192,4 +192,4 @@ Este projeto usa a Licença MIT. Veja o arquivo `LICENSE` para detalhes.
 Feito por **Slot148**.
 
 [LinkedIn](https://www.linkedin.com/in/nicolas-anderson-34b082302/) | [GitHub](https://github.com/Slot148)
-```
+
