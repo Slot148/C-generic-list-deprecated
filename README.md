@@ -56,7 +56,7 @@ O projeto utiliza **CMake** para a compilação.
     ```
 As pastas `include` e `lib` devem ser adicionadas as variáveis do ambiente ou do sistema.
 
-4. **Para compilar seu programa basta utilizar as flags `-Iinclude` e `-ltlists`:
+4. **Para compilar seu programa basta utilizar as flags `-Iinclude` e `-ltlists`:**
    ```bash
    gcc meu_arquivo.c -Iinclude -ltlist -o meu_programa.exe
    ```
