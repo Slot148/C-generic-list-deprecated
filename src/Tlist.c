@@ -637,7 +637,7 @@ void foreach(List this, void(*function)(void*)){
  * @return A new `List` that is a copy of the original, or `NULL` if the
  *         original list was `NULL`.
  */
-List duplicate(const List this){
+List duplicate(List this){
     if (this == NULL) {
         fprintf(stderr, "Error in duplicate(): The provided list instance is NULL.\n");
         return NULL;

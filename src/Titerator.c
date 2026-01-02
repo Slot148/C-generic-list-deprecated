@@ -13,7 +13,7 @@
  * @warning If memory allocation fails or the provided list is NULL,
  *          the program will exit with `EXIT_FAILURE`.
  */
-TIterator newIterator(const List list){
+TIterator newIterator(List list){
     TIterator iterator = malloc(sizeof(struct TIterator));
     if(iterator == NULL) {
         fprintf(stderr, "Error in newIterator(): Failed to allocate memory for the new iterator.\n");
@@ -71,16 +71,4 @@ bool hasNext(TIterator iterator){
  */
 void freeIterator(TIterator iterator){
     free(iterator);
-}
-
-/**
- * @brief Resets the iterator to the beginning of the list.
- *
- * After calling this function, the iterator will point to the head of the list,
- * and its index will be reset to 0, allowing for re-iteration from the start.
- * @param iterator A pointer to the iterator to be reset.
- */
-void resetIterator(TIterator iterator){
-    iterator->_current = iterator->_list->_head;
-    iterator->_index = 0;
 }
