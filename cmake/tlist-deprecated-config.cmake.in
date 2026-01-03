@@ -1,8 +1,0 @@
-@PACKAGE_INIT@
-
-include("${CMAKE_CURRENT_LIST_DIR}/tlist-deprecated-targets.cmake")
-
-# Verificação de dependências (se houver)
-# find_dependency(...)
-
-check_required_components(tlist-deprecated)
