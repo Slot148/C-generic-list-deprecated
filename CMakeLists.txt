@@ -7,6 +7,7 @@ set(CMAKE_C_EXTENSIONS OFF)
 
 file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
 
+set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib)
 set(ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
 
 add_library(Tlist STATIC src/Tlist.c src/Titerator.c)
@@ -24,4 +25,4 @@ install(TARGETS Tlist
     ARCHIVE DESTINATION lib
 )
 
-install(DIRECTORY include/DESTINATION include/tlist-deprecated)
+install(DIRECTORY include/ DESTINATION include/tlist-deprecated)
