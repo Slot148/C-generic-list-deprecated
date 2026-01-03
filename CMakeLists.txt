@@ -24,4 +24,4 @@ install(TARGETS Tlist
     ARCHIVE DESTINATION lib
 )
 
-install(DIRECTORY include/DESTINATION include/tlist-deprecated)/
+install(DIRECTORY include/DESTINATION include/tlist-deprecated)
