@@ -188,8 +188,10 @@ doxygen Doxyfile
 Este projeto usa a Licença MIT. Veja o arquivo `LICENSE` para detalhes.
 
 ---
-
 Feito por **Slot148**.
-
 [LinkedIn](https://www.linkedin.com/in/nicolas-anderson-34b082302/) | [GitHub](https://github.com/Slot148)
+
+### Nota:
+`Devido problemas recentes com a tentiva de implementar ao vcpkg, é possivel que haja problemas no cmake, recomendo o uso da versão já compilada ou ajustar o cmake manualmente.
+Como atualmente estou trabalhando em outra lib com o mesmo objetivo, é possivel que o arquivo não seja corrigido.`
 
