@@ -26,4 +26,4 @@ install(TARGETS Tlist
     RUNTIME DESTINATION bin
 )
 
-install(DIRECTORY include/ DESTINATION include)
+install(DIRECTORY include/ DESTINATION include/tlist-deprecated)
