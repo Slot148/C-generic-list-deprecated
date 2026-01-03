@@ -18,7 +18,6 @@ target_include_directories(Tlist PUBLIC include)
 set_target_properties(Tlist PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib
 )
-<<<<<<< HEAD
 
 target_include_directories(Tlist PUBLIC 
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -69,5 +68,3 @@ export(EXPORT tlist-deprecated-targets
     FILE ${CMAKE_CURRENT_BINARY_DIR}/cmake/tlist-deprecated-targets.cmake
     NAMESPACE tlist-deprecated::
 )
-=======
->>>>>>> dbe58e1bd79d34d5813a9ab1a479d8f92b2557fa
