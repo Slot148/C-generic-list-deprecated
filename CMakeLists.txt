@@ -1,27 +1,29 @@
 cmake_minimum_required(VERSION 3.10)
-project(lista)
+project(tlist-deprecated C) # Adicionado 'C' para clareza
 
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS OFF)
 
-file(MAKE_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
-
-set(ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib)
+# IMPORTANTE: Removidas as linhas de LIBRARY_OUTPUT_PATH para não conflitar com o vcpkg
 
 add_library(Tlist STATIC src/Tlist.c src/Titerator.c)
 
-target_compile_options(Tlist PRIVATE -Wall -Wextra -Wpedantic -Werror)
-target_include_directories(Tlist PUBLIC include)
-
-set_target_properties(Tlist PROPERTIES
-    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib
+# Dica: -Werror pode travar o build se houver um aviso bobo no MinGW. 
+# Remova o -Werror se o erro persistir.
+target_compile_options(Tlist PRIVATE -Wall -Wextra -Wpedantic)
+target_include_directories(Tlist PUBLIC 
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
 )
 
+# --- REGRAS DE INSTALAÇÃO (Obrigatório para o vcpkg) ---
+
 install(TARGETS Tlist
-    RUNTIME DESTINATION bin
-    LIBRARY DESTINATION lib
+    EXPORT TlistConfig
     ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
 )
 
 install(DIRECTORY include/ DESTINATION include)
