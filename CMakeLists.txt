@@ -19,11 +19,12 @@ target_include_directories(Tlist PUBLIC
 
 # --- REGRAS DE INSTALAÇÃO (Obrigatório para o vcpkg) ---
 
+install(DIRECTORY include/ DESTINATION include/tlist-deprecated)
+
+# Também ajuste o target se necessário
 install(TARGETS Tlist
     EXPORT TlistConfig
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin
 )
-
-install(DIRECTORY include/ DESTINATION include)
